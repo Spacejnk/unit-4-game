@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CrystalsCollector Game</title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+        <h1 id="crystals">Crystals Collector Game</h1>
+        <br>
+        <div class="text">
+            <p>You will give a random number at the start of the game.</p>
+            <br>
+            <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+            <br>
+            <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p> 
+            <br>
+            <p>The value of each crystal is hidden from you until you click on it.</p>
+            <br>
+            <p>Each time when the game starts, the game will change the value of each crystal.</p>
+            <br>
+
+            <p id="randNumber"></p>
+            <p id="winLoss"></p>
+            <div id="images">
+            <img id="emerald1" src="assets/images/emerald1.jpg" alt="emerald1">
+            <img id="emerald2" src="assets/images/emerald2.jpg" alt="emerald2">
+            <img id="emerald3" src="assets/images/emerald3.jpg" alt="emerald3">
+            <img id="emerald4" src="assets/images/emerald4.jpg" alt="emerald4">
+            </div>
+        
+
+            
+        </div>
+
+    </div>
+
+    <script src="assets/javascript/game.js"></script>
+</body>
+</html>
