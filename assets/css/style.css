@@ -37,8 +37,29 @@ div {
     float: left;
 }
 
+#scoreInfo {
+    width: 170px;
+    height: 20px;
+    padding-top: 10px;
+    margin-left: 15px;
+    padding-left: 15px;
+    font-size: 15px;
+    
+}
+
+#scoreBoard {
+    width: 170px;
+    height: 40px;
+    padding-top: 15px;
+    margin-top: 5px;
+    margin-left: 15px;
+    padding-left: 15px;
+    font-size: 15px;
+    
+}
+
 #winLoss {
-    width: 100px;
+    width: 140px;
     height:70px;
     padding-top: 25px;
     margin-left: 15px;
