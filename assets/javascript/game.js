@@ -3,6 +3,7 @@ var compChoice = Math.floor((Math.random() * 102) + 19);
 
 //document.getElementById("randNumber").innerHTML = x;
 
+// math rand userChoice on click
 var userChoice = Math.floor((Math.random() * 102) + 19);
 var userChoice2 = Math.floor((Math.random() * 102) + 19);
 var userChoice3 = Math.floor((Math.random() * 102) + 19);
