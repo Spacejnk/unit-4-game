@@ -24,10 +24,11 @@ var scoreChecker = function(compareAllCrystals) {
     console.log(mainRandNumToCompareWith);
     console.log(totalScore);
     console.log(compareAllCrystals);
-
+// if I win while clicking all four crystals.. alert name below or add a point the board
     if (totalScore === mainRandNumToCompareWith) {
         wins++;
         alert('Charlie Sheen!');
+        // add text to board with jQuery
         $("#win").text(wins);
          crystal1 = allCrystalRandomNum();
          crystal2 = allCrystalRandomNum();
@@ -37,9 +38,11 @@ var scoreChecker = function(compareAllCrystals) {
          
          totalScore = 0;
 
+// if I lose while clicking all four crystals.. alert statement below or add a point the board 
     } else if  (totalScore > mainRandNumToCompareWith) {
         losses++;
         alert('You Lost!');
+        // add text to board with jQuery
         $("#lose").text(losses);
         mainRandNumToCompareWith = randNumToCompareWith();
 
@@ -49,7 +52,7 @@ var scoreChecker = function(compareAllCrystals) {
         
     };
 
-
+    // while not losing just keep adding score to the board
     $("#scoreBoard").text(totalScore);
     return;
 
@@ -68,9 +71,11 @@ var scoreChecker = function(compareAllCrystals) {
 
 // jQuery function for crystal count
 $(document).ready(function () {
+// ready on reload or refresh   
     mainRandNumToCompareWith = randNumToCompareWith();
     $("#randNumber").text(mainRandNumToCompareWith);
-
+    
+// variables stored locally in rerady function
      crystal1 = allCrystalRandomNum();
      crystal2 = allCrystalRandomNum();
      crystal3 = allCrystalRandomNum();
@@ -78,12 +83,15 @@ $(document).ready(function () {
 
     
     $("#crystal1").click(function () {
-        $("#scoreBoard").text(allCrystalRandomNum);
+    
+    // Alert and console function not working correctly
+
+        $("#scoreBoard").text(allCrystalRandomNum());
 
         scoreChecker(crystal1);
 
-        console.log(allCrystalRandomNum() + " em1");
-        //alert(allCrystalRandomNum);
+        console.log(allCrystalRandomNum() + " crys1");
+        alert(allCrystalRandomNum());
     });
 
     $("#crystal2").click(function () {
@@ -91,19 +99,25 @@ $(document).ready(function () {
 
         scoreChecker(crystal2);
 
-        console.log(allCrystalRandomNum() + " em2");
-        //alert(allCrystalRandomNum);
+        console.log(allCrystalRandomNum() + " crys2");
+        alert(allCrystalRandomNum());
     });
 
 
     $(" #crystal3").click(function() {
+
         scoreChecker(crystal3);
-        //alert(userChoice3).load(); 
+
+        console.log(allCrystalRandomNum() + " crys3");
+       alert(allCrystalRandomNum());
     });
 
     $("  #crystal4").click(function() {
+
         scoreChecker(crystal4);
-        //alert(uuserChoice4); 
+
+        console.log(allCrystalRandomNum() + " crys4");
+        alert(allCrystalRandomNum());
     });
 
 
