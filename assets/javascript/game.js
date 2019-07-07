@@ -1,4 +1,4 @@
-// create variables for all four crystals set to undefined for now
+// create variables for all all crystals set to undefined for now
 var crystal1;
 var crystal2;
 var crystal3;
@@ -12,14 +12,14 @@ var totalScore = 0;
 var randNumToCompareWith = function () {
     return Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 };
-var fourCrystalRandomNum = function () {
+var allCrystalRandomNum = function () {
     return Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 };
 
 // create a function variable inside add if else to check if the player win or if the score goes over randNumToCompareWith ---- if score over then game is lost or over -- restart
 
-// fat Arrow function
-var scoreChecker = (compareAllCrystals) => {
+
+var scoreChecker = function(compareAllCrystals) {
     totalScore += compareAllCrystals;
     console.log(mainRandNumToCompareWith);
     console.log(totalScore);
@@ -28,10 +28,11 @@ var scoreChecker = (compareAllCrystals) => {
     if (totalScore === mainRandNumToCompareWith) {
         wins++;
         alert('Charlie Sheen!');
-         crystal1 = fourCrystalRandomNum();
-         crystal2 = fourCrystalRandomNum();
-         crystal3 = fourCrystalRandomNum();
-         crystal4 = fourCrystalRandomNum();
+        $("#win").text(wins);
+         crystal1 = allCrystalRandomNum();
+         crystal2 = allCrystalRandomNum();
+         crystal3 = allCrystalRandomNum();
+         crystal4 = allCrystalRandomNum();
          mainRandNumToCompareWith = randNumToCompareWith();
          
          totalScore = 0;
@@ -39,6 +40,7 @@ var scoreChecker = (compareAllCrystals) => {
     } else if  (totalScore > mainRandNumToCompareWith) {
         losses++;
         alert('You Lost!');
+        $("#lose").text(losses);
         mainRandNumToCompareWith = randNumToCompareWith();
 
         totalScore = 0;
@@ -48,7 +50,8 @@ var scoreChecker = (compareAllCrystals) => {
     };
 
 
-
+    $("#scoreBoard").text(totalScore);
+    return;
 
 
 
@@ -68,28 +71,39 @@ $(document).ready(function () {
     mainRandNumToCompareWith = randNumToCompareWith();
     $("#randNumber").text(mainRandNumToCompareWith);
 
-     crystal1 = fourCrystalRandomNum();
-     crystal2 = fourCrystalRandomNum();
-     crystal3 = fourCrystalRandomNum();
-     crystal4 = fourCrystalRandomNum();
+     crystal1 = allCrystalRandomNum();
+     crystal2 = allCrystalRandomNum();
+     crystal3 = allCrystalRandomNum();
+     crystal4 = allCrystalRandomNum();
 
-    //$("#winLoss").append("<p>Win: </p><p>Losses: </p>");
+    
     $("#crystal1").click(function () {
-        $("#scoreBoard").text(fourCrystalRandomNum);
+        $("#scoreBoard").text(allCrystalRandomNum);
 
-        scoreChecker(fourCrystalRandomNum);
+        scoreChecker(crystal1);
 
-        console.log(fourCrystalRandomNum() + " em1");
-        //alert(fourCrystalRandomNum);
+        console.log(allCrystalRandomNum() + " em1");
+        //alert(allCrystalRandomNum);
     });
 
     $("#crystal2").click(function () {
-        $("#scoreBoard").text(fourCrystalRandomNum());
+        $("#scoreBoard").text(allCrystalRandomNum());
 
-        scoreChecker(fourCrystalRandomNum);
+        scoreChecker(crystal2);
 
-        console.log(fourCrystalRandomNum() + " em2");
-        //alert(fourCrystalRandomNum);
+        console.log(allCrystalRandomNum() + " em2");
+        //alert(allCrystalRandomNum);
+    });
+
+
+    $(" #crystal3").click(function() {
+        scoreChecker(crystal3);
+        //alert(userChoice3).load(); 
+    });
+
+    $("  #crystal4").click(function() {
+        scoreChecker(crystal4);
+        //alert(uuserChoice4); 
     });
 
 
@@ -105,13 +119,3 @@ $(document).ready(function () {
 
 
 
-
-// $(" #crystal3").click(function() {
-
-//     //alert(userChoice3).load(); 
-// });
-
-//  $("  #crystal4").click(function() {
-
-//     //alert(uuserChoice4); 
-// });
