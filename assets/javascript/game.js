@@ -16,7 +16,7 @@ var allCrystalRandomNum = function () {
     return Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 };
 
-// create a function variable inside add if else to check if the player win or if the score goes over randNumToCompareWith ---- if score over then game is lost or over -- restart
+// create a function variable and inside scoreChecker add an if else to check if the player win or if the score goes over randNumToCompareWith ---- if score over then game is lost or over -- restart -- add a reload or restart function somewhere--
 
 
 var scoreChecker = function(compareAllCrystals) {
@@ -57,17 +57,7 @@ var scoreChecker = function(compareAllCrystals) {
     return;
 
 
-
-
-
 };
-
-
-
-
-
-
-
 
 // jQuery function for crystal count
 $(document).ready(function () {
@@ -83,9 +73,7 @@ $(document).ready(function () {
 
     
     $("#crystal1").click(function () {
-    
-    // Alert and console function not working correctly
-
+// Alert and console function not working correctly
         $("#scoreBoard").text(allCrystalRandomNum());
 
         scoreChecker(crystal1);
@@ -104,23 +92,23 @@ $(document).ready(function () {
     });
 
 
-    $(" #crystal3").click(function() {
+    $("#crystal3").click(function() {
+        $("#scoreBoard").text(allCrystalRandomNum());
 
         scoreChecker(crystal3);
 
         console.log(allCrystalRandomNum() + " crys3");
-       alert(allCrystalRandomNum());
+        alert(allCrystalRandomNum());
     });
 
-    $("  #crystal4").click(function() {
+    $("#crystal4").click(function() {
+        $("#scoreBoard").text(allCrystalRandomNum());
 
         scoreChecker(crystal4);
 
         console.log(allCrystalRandomNum() + " crys4");
         alert(allCrystalRandomNum());
     });
-
-
 
 
 
