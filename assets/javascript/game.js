@@ -28,7 +28,7 @@ var scoreChecker = function(compareAllCrystals) {
     console.log(mainRandNumToCompareWith);
     console.log(totalScore);
     console.log(compareAllCrystals);
-// if I win while clicking all four crystals.. alert name below or add a point the board
+// if I win while clicking all four crystals.. alert name below or add a point to the board
     if (totalScore === mainRandNumToCompareWith) {
         wins++;
         // Auto refresh randNumToCompareWith
@@ -37,7 +37,7 @@ var scoreChecker = function(compareAllCrystals) {
         // add text to board with jQuery
         $("#win").text(wins);
         
-        crystal1 = allCrystalRandomNum();
+         crystal1 = allCrystalRandomNum();
          crystal2 = allCrystalRandomNum();
          crystal3 = allCrystalRandomNum();
          crystal4 = allCrystalRandomNum();
@@ -60,8 +60,6 @@ var scoreChecker = function(compareAllCrystals) {
     // while winning or losing just keep adding score to the board
     $("#scoreBoard").text(totalScore);
     return;
-
-
 };
 
 // jQuery function for crystal count
@@ -75,7 +73,6 @@ $(document).ready(function () {
      crystal2 = allCrystalRandomNum();
      crystal3 = allCrystalRandomNum();
      crystal4 = allCrystalRandomNum();
-
     
     $("#crystal1").click(function () {
 // Alert and console function not working correctly
@@ -83,8 +80,8 @@ $(document).ready(function () {
 
         scoreChecker(crystal1);
 
-        console.log(allCrystalRandomNum() + " crys1");
-        alert(crystal1);
+        // console.log(allCrystalRandomNum() + " crys1");
+        // alert(crystal1);
     });
 
     $("#crystal2").click(function () {
@@ -92,8 +89,8 @@ $(document).ready(function () {
 
         scoreChecker(crystal2);
 
-        console.log(allCrystalRandomNum() + " crys2");
-        alert(crystal2);
+        // console.log(allCrystalRandomNum() + " crys2");
+        // alert(crystal2);
     });
 
 
@@ -102,8 +99,8 @@ $(document).ready(function () {
 
         scoreChecker(crystal3);
 
-        console.log(allCrystalRandomNum() + " crys3");
-        alert(crystal3);
+        // console.log(allCrystalRandomNum() + " crys3");
+        // alert(crystal3);
     });
 
     $("#crystal4").click(function() {
@@ -111,12 +108,12 @@ $(document).ready(function () {
 
         scoreChecker(crystal4);
 
-        console.log(allCrystalRandomNum() + " crys4");
-        alert(crystal4);
+        // console.log(allCrystalRandomNum() + " crys4");
+        // alert(crystal4);
     });
-
-    
 });
+
+// Add sound and animation
 
 
 
