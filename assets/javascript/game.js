@@ -33,7 +33,7 @@ var scoreChecker = function(compareAllCrystals) {
         wins++;
         // Auto refresh randNumToCompareWith
         autoRefresh;
-        alert('Charlie Sheen!');
+        alert('You won!');
         // add text to board with jQuery
         $("#win").text(wins);
         
