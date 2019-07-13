@@ -1,6 +1,6 @@
 body {
     /* background-color: rgb(203, 197, 197); */
-    background-image: url("/assets/images/dices.jpg");
+    background-image: url("../images/dices.jpg");
 }
 #container {
     padding-left: 30px; 
